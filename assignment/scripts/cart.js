@@ -37,7 +37,19 @@ function isFull() {
     return true;
 }
 
+function removeItem( item ) {
+    let index = basket.indexOf(item);
+    if (index != -1) {
+        console.log(`Removing ${item} from basket.`);
+        basket.splice[index];
+        return item;
+    }
+    console.log("Item not found.");
+    return null;
+}
+
 let item1 = "bananas"
 addItem(item1);
 listItems();
 empty();
+removeItem(item1);

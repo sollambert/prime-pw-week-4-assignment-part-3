@@ -11,7 +11,6 @@ function addItem( item ) {
     if (!isFull()) {
         basket.push(item);
         console.log("Item successfully added.")
-        console.log(`New basket contents: ${basket}`);
         return true;
     }
     console.log("Item failed to be added to cart.")

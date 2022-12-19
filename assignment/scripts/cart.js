@@ -68,6 +68,8 @@ function removeItem( item ) {
     return null;
 }
 
+
+//testing
 let item1 = "bananas"
 addItem(item1);
 listItems();

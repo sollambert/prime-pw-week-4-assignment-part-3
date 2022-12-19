@@ -61,7 +61,7 @@ function removeItem( item ) {
     let index = basket.indexOf(item);
     if (index != -1) {
         console.log(`Removing ${item} from basket.`);
-        basket.splice[index];
+        basket.splice([index], 1);
         return item;
     }
     console.log("Item not found.");
@@ -71,5 +71,11 @@ function removeItem( item ) {
 let item1 = "bananas"
 addItem(item1);
 listItems();
-//empty();
+empty();
+
+for (let i = 0; i < 7; i ++) {
+    addItem(item1);
+}
+listItems();
 removeItem(item1);
+listItems();

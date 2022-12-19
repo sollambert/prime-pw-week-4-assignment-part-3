@@ -5,6 +5,11 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 
+/**
+ * Adds item to basket
+ * @param {string} item The item to add to the basket.
+ * @returns {boolean} True if the addition was successful, otherwise false.
+ */
 function addItem( item ) {
     let basketLength = basket.length;
     console.log(`Adding ${item1} to basket.`);
@@ -17,6 +22,9 @@ function addItem( item ) {
     return false;
 }
 
+/**
+ * Prints all items in basket to console.
+ */
 function listItems() {
     console.log("Basket items: ")
     for (let i = 0; i < basket.length; i ++) {
@@ -24,12 +32,19 @@ function listItems() {
     }
 }
 
+/**
+ * Assigns global basket variable to empty array.
+ */
 function empty() {
     console.log("Emptying basket.")
     basket = [];
     listItems();
 }
 
+/**
+ * Checks if basket length is equal to maxItems const variable.
+ * @returns {boolean} False if basket length is less than maxItems const variable, otherwise true
+ */
 function isFull() {
     if (basket.length < maxItems) {
         return false;
@@ -37,6 +52,11 @@ function isFull() {
     return true;
 }
 
+/**
+ * Removes given item from the basket array.
+ * @param {string} item The item to be removed from the array.
+ * @returns The item that was removed if it was found within the array, otherwise null.
+ */
 function removeItem( item ) {
     let index = basket.indexOf(item);
     if (index != -1) {
@@ -51,5 +71,5 @@ function removeItem( item ) {
 let item1 = "bananas"
 addItem(item1);
 listItems();
-empty();
+//empty();
 removeItem(item1);
